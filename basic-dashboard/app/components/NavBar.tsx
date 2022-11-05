@@ -34,7 +34,7 @@ export const SideNav: React.FC<{ selected: Routes }> = ({ selected }) => {
           />
           <MainNavLink
             name="creator"
-            route="/creator"
+            route="/creator/create"
             selected={selected === Routes.Creator}
           />
         </ul>
@@ -45,6 +45,9 @@ export const SideNav: React.FC<{ selected: Routes }> = ({ selected }) => {
         </h4>
         <h4 className="text-center font-light text-gray-300">
           <a href="https://insiderviz.com">real site</a>
+        </h4>
+        <h4 className="text-center font-light text-gray-300">
+          <a href="https://github.com/bmdavis419/remix-demo">git repo</a>
         </h4>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { NavLink } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 
 export enum DashboardRoutes {
   AAPL,
@@ -48,9 +48,9 @@ const DashboardNavLink: React.FC<{
 }> = ({ name, route, selected }) => {
   return (
     <li className="text-2xl font-light text-white hover:bg-bg-primary px-2 py-2 rounded-md">
-      <NavLink to={route} className={selected ? "underline" : ""}>
+      <Link to={route} className={selected ? "underline" : ""}>
         {name}
-      </NavLink>
+      </Link>
     </li>
   );
 };
