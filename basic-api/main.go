@@ -165,7 +165,7 @@ func main() {
 		return c.JSON(results)
 	})
 
-	app.Listen(":8080")
+	app.Listen(":" + get_port())
 }
 
 func auth_check(c *fiber.Ctx) error {
@@ -178,6 +178,15 @@ func auth_check(c *fiber.Ctx) error {
 	}
 
 	return c.Next()
+}
+
+func get_port() string {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	return port
 }
 
 func get_api_key() string {
